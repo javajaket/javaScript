@@ -124,4 +124,40 @@ todos.sort(function(a,b){
 });
 console.log(todos);
 
+/*Array.prototype.slice 
+- 배열의 특정 부분에 대한 복사본을 생성
+- 첫번째 매개변수 start에 해당하는 인덱스를 갖는 요소부터 매개변수 end에 해당하는 인덱스를 가진 요소 전까지 복사
+*/
+/*
+slice는 myCar에서 newCar라는 새 배열을 만든다. 두 가지 모두 myHonda객체에 
+대한 참조를 포함. myHonda의 색상이 자주색으로 변경되면 두 배열 모두 변경 사항을 반영
+*/
+var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+var myCar = [myHonda, 2, 'cherry condition', 'purchased 1997'];
+var newCar = myCar.slice(0, 2);
 
+// 내 자동차, 새 자동차 및 혼다의 색상 값을 표시합니다.
+// 두 배열에서 모두 참조됩니다.
+console.log(myCar);
+console.log(newCar);
+console.log('myCar[0].color = ' + myCar[0].color);
+console.log('newCar[0].color = ' + newCar[0].color);
+
+myHonda.color = 'purple';
+console.log('The new color of my Honda is ' + myHonda.color);
+
+console.log(myCar);
+console.log(newCar);
+
+/*
+slice 메서드를 호출하여 Array와 유사한 객체/컬렉션을 새 Array로 변환 할 수도 있다.
+메서드를 객체에 바인딩하면 된다.
+*/
+function list(){
+  return Array.prototype.call(arguments);
+  //[].slice.call(arguments); 을 사용하여 줄일 수 있다.
+}
+
+var list1 = list(1,2,3);
+
+console.log(list1);

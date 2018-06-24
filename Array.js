@@ -149,7 +149,7 @@ console.log('The new color of my Honda is ' + myHonda.color);
 console.log(myCar);
 console.log(newCar);
 
-/*
+/*ㅣ
 slice 메서드를 호출하여 Array와 유사한 객체/컬렉션을 새 Array로 변환 할 수도 있다.
 메서드를 객체에 바인딩하면 된다.
 */

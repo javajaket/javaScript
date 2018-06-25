@@ -7,7 +7,7 @@
   console.log(arr.indexOf(4)); //-1
   console.log(arr.indexOf(2,2)); //1
 */
-//배열에 존재하는지 확인하고 뱌열을 업데이트 하는 방식
+//배열에 존재하는지 확인하고 배열을 업데이트 하는 방식
 function updateVegetableCollection(veggies, veggie){
   if(veggies.indexOf(veggie) === -1){
     veggies.push(veggie);
@@ -161,3 +161,25 @@ function list(){
 var list1 = list(1,2,3);
 
 console.log(list1);
+
+/*Array.prototype.splice
+- 기존의 배열의 요소를 제거하고 그위치에 새로운 요소를 추가한다. 
+  배열 중간에 새로운 요소를 추가할 때도 사용된다.
+*/
+var items = ['one','four'];
+
+Array.prototype.splice.apply(items,[1,0].concat(['two','three']));
+
+console.log(items);
+
+/*Array.prototoype.forEach
+- 오름차순으로 배열에 있는 각 요소에 대해 한 번씩 제공한 callback을 실행.
+  삭제 또는 비초기화된 인덱스 속성에 대해서는 호출되지 않는다.
+*/
+arr.forEach(callback[, thisArg]);
+/*callbakc(각 요소에 대해 실행할 함수, 인수 셋을 취하는:)
+    currentValue: 배열에서 현재 처리 중인 요소.
+    index: 배열에서 현재 처리 중인 요소의 인덱스.
+    array: forEach()가 적용되고 있는 배열.
+  thisArg: 선책사항. callbakc을 실행할 때 this로서 사용하는 값.
+*/

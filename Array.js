@@ -11,7 +11,7 @@
 function updateVegetableCollection(veggies, veggie){
   if(veggies.indexOf(veggie) === -1){
     veggies.push(veggie);
-    console.log('New veggies collection is: ' + veggies);
+    console.log('New veggies collection is: ' + veggie);
   }else if(veggies.indexOf(veggie) > -1){
     console.log(veggie + ' already exists in the veggies collection');
   }
@@ -182,4 +182,9 @@ arr.forEach(callback[, thisArg]);
     index: 배열에서 현재 처리 중인 요소의 인덱스.
     array: forEach()가 적용되고 있는 배열.
   thisArg: 선책사항. callbakc을 실행할 때 this로서 사용하는 값.
+*/
+/*
+콜백함수
+-코드를 통해 명시적으로 호출하는 함수가 아니라, 개발자는 단지 함수를 등록하기만 하고,
+ 어떤 이벤트가 발생했거나 특정 시점에 도달했을때 시스템에서 호출되는 함수      
 */
